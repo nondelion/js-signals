@@ -5,10 +5,18 @@
  * JS Signals <http://millermedeiros.github.com/js-signals/>
  * Released under the MIT license
  * Author: Miller Medeiros
- * Version: 1.0.0 - Build: 268 (2012/11/29 05:48 PM)
+ * Version: 1.0.0 - Build: 277 (2014/04/23 05:04 午後)
  */
 
 (function(global){
+
+    function __extends(base, properties) { 
+        for (var key in properties) {
+            if (properties.hasOwnProperty(key)) {
+                base.prototype[key] = properties[key];
+            }
+        }
+    };
 
     // SignalBinding -------------------------------------------------
     //================================================================
@@ -66,7 +74,7 @@
         this._priority = priority || 0;
     }
 
-    SignalBinding.prototype = {
+    var SignalBindingProperties = {
 
         /**
          * If binding is active and should be executed.
@@ -154,6 +162,8 @@
 
     };
 
+    __extends(SignalBinding, SignalBindingProperties);
+
 
 /*global SignalBinding:false*/
 
@@ -188,7 +198,7 @@
         };
     }
 
-    Signal.prototype = {
+    var SignalProperties = {
 
         /**
          * Signals Version Number
@@ -410,6 +420,8 @@
         }
 
     };
+
+    __extends(Signal, SignalProperties);
 
 
     // Namespace -----------------------------------------------------

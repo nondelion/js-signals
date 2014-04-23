@@ -31,7 +31,7 @@
         };
     }
 
-    Signal.prototype = {
+    var SignalProperties = {
 
         /**
          * Signals Version Number
@@ -253,6 +253,8 @@
         }
 
     };
+
+    __extends(Signal, SignalProperties);
 
 
     // Namespace -----------------------------------------------------

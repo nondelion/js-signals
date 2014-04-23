@@ -54,7 +54,7 @@
         this._priority = priority || 0;
     }
 
-    SignalBinding.prototype = {
+    var SignalBindingProperties = {
 
         /**
          * If binding is active and should be executed.
@@ -141,3 +141,5 @@
         }
 
     };
+
+    __extends(SignalBinding, SignalBindingProperties);

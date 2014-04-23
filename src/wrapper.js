@@ -4,6 +4,14 @@
 //::LICENSE:://
 (function(global){
 
+    function __extends(base, properties) { 
+        for (var key in properties) {
+            if (properties.hasOwnProperty(key)) {
+                base.prototype[key] = properties[key];
+            }
+        }
+    };
+
 //::SIGNAL_BINDING_JS:://
 
 //::SIGNAL_JS:://
